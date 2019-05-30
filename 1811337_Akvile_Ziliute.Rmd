@@ -74,7 +74,7 @@ Apskaičiuokite, koks buvo vidutinis kiekvienos šalies darbo užmokesčio ir BV
 
 ```{r}
 library(dplyr)
-group_by(df_1,geo %>% summarise(m=mean(values)))
+group_by(df_1,geo) %>% summarise( m = mean(values))
 ```
 
 ## Užduotis - nubraižykite darbo pajamų ir BVP santykio grafiką
