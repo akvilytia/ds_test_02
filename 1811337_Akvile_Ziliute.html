@@ -191,7 +191,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">2 Testas</h1>
 <h4 class="author">Akvilė Žiliūtė, 1811337</h4>
-<h4 class="date">2019-05-30 12:45</h4>
+<h4 class="date">2019-05-30 12:52</h4>
 
 </div>
 
@@ -247,8 +247,13 @@ df &lt;- namq_10_gdp %&gt;%
 <h2><span class="header-section-number">1.4</span> Užduotis</h2>
 <p>Apskaičiuokite, koks buvo vidutinis kiekvienos šalies darbo užmokesčio ir BVP santykis nuo 2000 iki naujausio turimo periodo. Kodas turėtų rezultuoti išraiškoje, iš kurios būtų matomas visų trijų šalių naudojamo periodo vidurkis.</p>
 <pre class="r"><code>library(dplyr)
-group_by(df_1,geo %&gt;% summarise(m=mean(values)))
-## Error in UseMethod(&quot;summarise_&quot;): no applicable method for 'summarise_' applied to an object of class &quot;character&quot;</code></pre>
+group_by(df_1,geo) %&gt;% summarise( m = mean(values))
+## # A tibble: 3 x 2
+##   geo       m
+##   &lt;chr&gt; &lt;dbl&gt;
+## 1 EE     46.2
+## 2 LT     41.1
+## 3 LV     42.6</code></pre>
 </div>
 <div id="uzduotis---nubraizykite-darbo-pajamu-ir-bvp-santykio-grafika" class="section level2">
 <h2><span class="header-section-number">1.5</span> Užduotis - nubraižykite darbo pajamų ir BVP santykio grafiką</h2>
